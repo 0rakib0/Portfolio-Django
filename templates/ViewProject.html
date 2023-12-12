@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio | project | page</title>
+</head>
+
+<body class="bg-[url({% static 'assets/img/bg.jpg' %})]">
+    <div class="mt-4 md:mt-8 flex justify-center">
+        <a href="/" class="text-white text-2xl font-bold">Back To Home</a>
+    </div>
+    <div class="flex flex-col md:flex-col-reverse lg:flex-row p-5 md:w-10/12 mx-auto md:mt-16 space-x-6">
+        <div class="w-3/4 mx-auto md:mt-4 lg:mt-0 h-[300px] mb-4 md:h-[500px] overflow-y-scroll rounded-lg">
+            <img src="/media/{{viewPortfolio.projectLongImage}}" width="100%" alt="">
+
+        </div>
+        <div class="text-white">
+            <h4 class="text-2xl font-bold mb-2">{{viewPortfolio.projectName}}</h4>
+            <p class="text-xl mb-4">Project Type: {{viewPortfolio.projectType}}</p>
+            <div class="s" style="background-color: rgba(0, 0, 0, 0.63) p-4;">
+                <p class="text-xl font-bold">Top Feature: </p>
+                <li class="mb-2">{{viewPortfolio.projectFeature1}}</li>
+                <li class="mb-2">{{viewPortfolio.projectFeature2}}</li>
+                <li class="mb-2">{{viewPortfolio.projectFeature3}}</li>
+                <li class="mb-2">{{viewPortfolio.projectFeature4}}</li>
+            </div>
+            <p class="my-4"><span class="text-xl font-semibold">Technology:</span> {{viewPortfolio.usedTecnology}}</p>
+            <p><span class="font-bold text-xl ml-2">Project Source code</span>: <a
+                    href={{viewPortfolio.projectSourceCodeLink}} class="text-green-400" target="_blank">View Source
+                    Code</a>
+            </p>
+            <p><span class="font-bold text-xl ml-2">Project Live Link</span>: <a href={{viewPortfolio.projectLiveLink}}
+                    class="text-green-400" target="_blank">View Project</a></p>
+            <p class="text-white mt-4 text-xl font-bold">Project Details</p>
+            <p class="text-white">{{viewPortfolio.projectDetails}}</p>
+        </div>
+    </div>
+</body>
+
+</html>
