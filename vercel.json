@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "Portfolio-django/wsgi.py",
+        "src": "personalPortfolio/wsgi.py",
         "use": "@vercel/python",
         "config": {
           "maxLambdaSize": "15mb",
@@ -13,7 +13,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "Portfolio-django/wsgi.py"
+        "dest": "personalPortfolio/wsgi.py"
       }
     ]
   }
