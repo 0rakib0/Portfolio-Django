@@ -24,6 +24,6 @@ django_application = get_wsgi_application()
 application = WhiteNoise(django_application)
 
 # Add the static and media file serving configurations
-application.add_files(os.path.join(os.path.dirname(__file__), 'staticfiles'), prefix='/static/')
+application.add_files(os.path.join(os.path.dirname(__file__), 'staticfiles_build'), prefix='/static/')
 application.add_files(os.path.join(os.path.dirname(__file__), 'media'), prefix='/media/')
 
