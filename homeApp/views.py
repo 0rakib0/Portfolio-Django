@@ -14,6 +14,8 @@ def home(request):
     service = Service.objects.all()
     category = PortfolioCategory.objects.all()
     portfolio = Portfolio.objects.all()
+    print('Helo-------------')
+    print(portfolio)
     
     context ={
         'aboutMe':aboutMe,
